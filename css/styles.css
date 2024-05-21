@@ -1,65 +1,104 @@
 @font-face {
-    font-family: 'Mntrl-Thin';
-    src: url('../assets/PPNeueMontreal-Thin.otf') format('otf');
+    font-family: 'Mntrl';
+    src: url('../assets/NeueMontreal-Light.woff') format('woff');
     font-weight: 100;
     font-style: normal;
 }
 @font-face {
     font-family: 'Mntrl';
-    src: url('../assets/NeueMontreal-Regular.otf') format('otf');
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Mntrl-Italic';
-    src: url('../assets/NeueMontreal-Italic.otf') format('otf');
-    font-weight: 500;
+    src: url('../assets/NeueMontreal-LightItalic.woff') format('woff');
+    font-weight: 100;
     font-style: italic;
 }
 @font-face {
-    font-family: 'Mntrl-Bold';
-    src: url('../assets/NeueMontreal-Bold.otf') format('otf');
-    font-weight: 900;
+    font-family: 'Mntrl';
+    src: url('../assets/NeueMontreal-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Mntrl';
+    src: url('../assets/NeueMontreal-MediumItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Mntrl';
+    src: url('../assets/NeueMontreal-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Ssse';
+    src: url('../assets/Suisse-Intl-Mono.ttf') format('ttf');
+    font-weight: 500;
     font-style: bold;
 }
-body {
+* body {
     font-family: 'Mntrl', sans-serif;
     margin: 0;
     padding: 0;
 }
+h1 {
+    font-size: 70px;
+    font-weight: 900;
+}
+h2 {
+    font-family: 'Mntrl', sans-serif;
+    font-size: 40px;
+    font-weight: 100;
+}
 header {
-    background-color: #4CAF50;
     color: white;
-    padding: 1em 0;
-    text-align: center;
+    z-index: 1;
+    position: relative;
+    height: 180px;
+    display: flex;
+    flex-direction: row;
 }
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-nav ul li {
-    display: inline;
-    margin-right: 1em;
-}
-nav ul li a {
+div.hero {
+    position: relative;
+    z-index: 1;
     color: white;
-    text-decoration: none;
+    display: flex;
+    height:100vh;
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    padding: 0px 5% 0px 5%;
+}
+.hero>div {
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+.herotxt {
+    width: 50%;
+    position: relative;
+}
+div.hero3d {
+    position: fixed;
+    right: -25%;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 main {
-    padding: 1em;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-top: -180px;
 }
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
+
 .dottedbg {
-    max-width: 200vw !important;
+    width: 100vw !important;
+    min-height: 200vh !important;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    position: absolute;
+    top: -50%;
+    z-index: 0;
   --dot-bg: #121212;
   --dot-color: white;
   --dot-size: 1px;

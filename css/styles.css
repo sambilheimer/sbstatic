@@ -58,6 +58,7 @@ header {
     height: 180px;
     display: flex;
     flex-direction: row;
+    padding: 0px 4% 0px 4%;
 }
 div.hero {
     position: relative;
@@ -69,6 +70,9 @@ div.hero {
     width: 100%;
     align-items: center;
     padding: 0px 4% 0px 4%;
+}
+.hero h1 {
+    margin: 0px;
 }
 .hero>div {
     flex-grow: 1;
@@ -91,6 +95,10 @@ main {
     box-sizing: border-box;
     margin-top: -180px;
 }
+body {
+    max-height: 100vh;
+    overflow: hidden;
+}
 
 .dottedBG {
     width: 100vw !important;
@@ -102,6 +110,7 @@ main {
     position: absolute;
     top: -50%;
     z-index: 0;
+    opacity: 0.4;
   --dot-bg: #121212;
   --dot-color: white;
   --dot-size: 1px;
@@ -110,4 +119,44 @@ main {
 		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
 		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
 		var(--dot-color);
+}
+.dottedBG {
+    animation: bgfade linear both;
+    animation-timeline: scroll();
+    animation-range: entry 0% cover 100%;
+  }
+
+@keyframes bgfade {
+    from {
+        opacity: 0.4;
+        transform: translate(0px, 0px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(8px, -40px);
+    }
+    0% {
+        opacity: 0.4;
+    }
+}
+@media screen and (max-width:600px) {
+    div.hero3d {
+        right: -55%;
+        align-items: flex-end;
+        width: 200%;
+    }
+    div.hero {
+        align-items: flex-start;
+    }
+    .heroTxt {
+        padding-top: 120px;
+    }
+    h1 {
+        font-size: 42px;
+    }
+}
+@media screen and (max-width:600px) and (min-width: 490px) {
+    div.hero3d {
+        bottom: -80px;
+    }
 }

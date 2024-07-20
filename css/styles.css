@@ -1,30 +1,30 @@
 @font-face {
     font-family: 'Mntrl';
-    src: url('../assets/NeueMontreal-Light.woff') format('woff');
+    src: url('../assets/JetBrainsMonoNL-Thin.woff') format('woff');
     font-weight: 100;
     font-style: normal;
 }
 @font-face {
     font-family: 'Mntrl';
-    src: url('../assets/NeueMontreal-LightItalic.woff') format('woff');
+    src: url('../assets/JetBrainsMonoNL-ThinItalic.woff') format('woff');
     font-weight: 100;
     font-style: italic;
 }
 @font-face {
     font-family: 'Mntrl';
-    src: url('../assets/NeueMontreal-Medium.woff') format('woff');
+    src: url('../assets/JetBrainsMonoNL-Medium.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Mntrl';
-    src: url('../assets/NeueMontreal-MediumItalic.woff') format('woff');
+    src: url('../assets/JetBrainsMonoNL-MediumItalic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
 }
 @font-face {
     font-family: 'Mntrl';
-    src: url('../assets/NeueMontreal-Bold.woff') format('woff');
+    src: url('../assets/JetBrainsMonoNL-ExtraBold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
@@ -48,6 +48,12 @@ h2 {
     font-size: 40px;
     font-weight: 100;
 }
+h3 {
+    font-family: 'Mntrl', sans-serif;
+    font-size: 30px;
+    font-weight: 100;
+    line-height: 40px;
+}
 body {
     background-color: #121212;
 }
@@ -55,10 +61,22 @@ header {
     color: white;
     z-index: 1;
     position: relative;
-    height: 180px;
+    height: 100px;
     display: flex;
     flex-direction: row;
-    padding: 0px 4% 0px 4%;
+    align-items: flex-end;
+    padding: 4% 4% 0px 8%;
+}
+header h2 {
+    margin: 0px;
+}
+div.logoIcon {
+    background: url('../images/Logo_V1.png');
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-right: 40px;
 }
 div.hero {
     position: relative;
@@ -69,7 +87,7 @@ div.hero {
     min-height: 100vh;
     width: 100%;
     align-items: center;
-    padding: 0px 4% 0px 4%;
+    padding: 0px 4% 0px 8%;
 }
 .hero h1 {
     margin: 0px;
@@ -79,8 +97,12 @@ div.hero {
     flex-shrink: 0;
 }
 .heroTxt {
-    width: 50%;
+    max-width: 560px;
     position: relative;
+}
+.heroTxt h3 {
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 div.hero3d {
     position: fixed;
@@ -119,6 +141,9 @@ body {
 		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
 		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
 		var(--dot-color);
+}
+.test{
+    background: linear-gradient(90deg, #121212 calc(32px - 1px), transparent 1%) center / 32px 32px, linear-gradient(#121212 calc(32px - 1px), transparent 1%) center / 32px 32px, #ffffff;
 }
 .dottedBG {
     animation: bgfade linear both;

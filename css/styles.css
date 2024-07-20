@@ -38,6 +38,7 @@
     font-family: 'Mntrl', sans-serif;
     margin: 0;
     padding: 0;
+    transition: all 0.5s ease;
 }
 h1 {
     font-size: 70px;
@@ -55,11 +56,13 @@ h3 {
     line-height: 1.6em;
 }
 body {
-    background-color: #121212;
+    --dark: #121212;
+    --light: white;
+    background-color: var(--dark);
 }
 header {
-    color: white;
-    z-index: 1;
+    color: var(--light);
+    z-index: 2;
     position: relative;
     height: 100px;
     display: flex;
@@ -71,17 +74,22 @@ header h2 {
     margin: 0px;
 }
 div.logoIcon {
-    background: url('../images/Logo_V1.png');
+    background-image: url('../images/Logo_V1.png');
     width: 100px;
     height: 100px;
     background-size: contain;
     background-repeat: no-repeat;
     padding-right: 40px;
+    z-index: 9;
+}
+div.logoIcon:hover {
+    background-image: url('../images/Logo_V2.png');
+    cursor: crosshair;
 }
 div.hero {
     position: relative;
     z-index: 1;
-    color: white;
+    color: var(--light);
     display: flex;
     height:100vh;
     min-height: 100vh;
@@ -104,7 +112,7 @@ div.hero {
 .heroTxt h3 {
     padding-top: 60px;
     padding-bottom: 60px;
-    text-shadow: 1px 1px 2px black;
+    text-shadow: 1px 1px 2px var(--dark);
 }
 div.hero3d {
     position: fixed;
@@ -197,4 +205,18 @@ body {
     div.hero3d {
         bottom: -80px;
     }
+}
+body#bodyStyle.lightmode .dottedBG {
+  --dot-bg: white;
+  --dot-color: #121212;
+}
+body#bodyStyle.lightmode {
+    --light: #121212 !important;
+    --dark: white !important;
+}
+body#bodyStyle.lightmode div.logoIcon {
+    background-image: url('../images/Logo_V2.png');
+}
+body#bodyStyle.lightmode div.logoIcon:hover {
+    background-image: url('../images/Logo_V1.png');
 }

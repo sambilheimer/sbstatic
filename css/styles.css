@@ -52,7 +52,7 @@ h3 {
     font-family: 'Mntrl', sans-serif;
     font-size: 30px;
     font-weight: 100;
-    line-height: 40px;
+    line-height: 1.6em;
 }
 body {
     background-color: #121212;
@@ -185,7 +185,7 @@ body {
         padding-top: 120px;
         max-width: 80%;
         width: 80vw;
-        font-size: 24px;
+        font-size: clamp(1rem, 0.25rem + 4vw, 1.75rem);
         padding-bottom: 20px;
     }
     .quickList {

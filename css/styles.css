@@ -79,7 +79,7 @@ div.logoIcon {
     height: 100px;
     background-size: contain;
     background-repeat: no-repeat;
-    padding-right: 40px;
+    margin-right: 40px;
     z-index: 9;
 }
 div.logoIcon:hover {

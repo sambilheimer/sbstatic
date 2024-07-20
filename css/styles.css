@@ -99,6 +99,7 @@ div.hero {
 .heroTxt {
     max-width: 560px;
     position: relative;
+    z-index: 2;
 }
 .heroTxt h3 {
     padding-top: 60px;
@@ -111,6 +112,7 @@ div.hero3d {
     width: 100%;
     display: flex;
     align-items: center;
+    z-index: 1;
 }
 main {
     overflow: hidden;
@@ -178,6 +180,16 @@ body {
     }
     h1 {
         font-size: 42px;
+    }
+    .hero .heroTxt h3 {
+        padding-top: 120px;
+        max-width: 80%;
+        width: 80vw;
+        font-size: 24px;
+        padding-bottom: 20px;
+    }
+    .quickList {
+        display: none;
     }
 }
 @media screen and (max-width:600px) and (min-width: 490px) {

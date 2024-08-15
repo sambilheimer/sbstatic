@@ -73,6 +73,10 @@ header {
 header h2 {
     margin: 0px;
 }
+header a {
+    text-decoration: none;
+    color: white;
+}
 div.logoIcon {
     background-image: url('../images/Logo_V1.png');
     width: 100px;
